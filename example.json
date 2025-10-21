@@ -1,0 +1,407 @@
+{
+    "displayTimeUnit": "ms",
+    "traceEvents": [
+        {
+            "name":"process_name","ph":"M","ts":0,
+            "pid":6616,"tid":0,"args":{"name":"VLLM:EngineCore"}
+        },
+        {
+            "name":"thread_name","ph":"M","ts":0,
+            "pid":6616,"tid":6616,"arg":{"name":"thread 6616 (VLLM::EngineCor)"}
+        },
+        {
+            "ph": "X","cat":"python_function","ts":0,"dur":10000.000,
+            "name":"multiprocessing/process.py(314): _bootstrap",
+            "pid":6616,"tid":6616,"args":{"Python parent id": 31,"Python id": 32,"Ev Idx": 34373}
+        },
+        {
+            "ph": "X","cat":"python_function","ts":5,"dur":9990.000,
+            "name":"multiprocessing/process.py(108): run",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"python_function","ts":20,"dur":9950.000,
+            "name":"vllm/v1/engine/core.py(701): run_engine_core",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"python_function","ts":21,"dur":9940.000,
+            "name":"vllm/v1/engine/core.py(726): run_busy_loop",
+            "pid":6616,"tid":6616,"args":{}
+        },
+
+        {
+            "ph": "X","cat":"python_function","ts":100,"dur":2000.000,
+            "name":"vllm/v1/engine/core.py(272): step",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"python_function","ts":110,"dur":40.000,
+            "name":"vllm/v1/core/sched/scheduler.py(179): schedule",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"python_function","ts":150,"dur":1900.000,
+            "name":"vllm/v1/worker/gpu_model_runner.py(2230): execute_model",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"python_function","ts":160,"dur":540.000,
+            "name":"vllm/v1/worker/gpu_model_runner.py(526): _update_states",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cpu_op","ts":200,"dur":300.000,
+            "name":"aten::copy_",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cuda_runtime","ts":400,"dur":50.000,
+            "name":"cudaMemcpyAsync",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"python_function","ts":700,"dur":400.000,
+            "name":"vllm/v1/worker/gpu_model_runner.py(923): _prepare_inputs",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cpu_op","ts":750,"dur":100.000,
+            "name":"aten::copy_",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cuda_runtime","ts":800,"dur":30.000,
+            "name":"cudaMemcpyAsync",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cpu_op","ts":900,"dur":80.000,
+            "name":"aten::sub",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cuda_runtime","ts":920,"dur":30.000,
+            "name":"cudaLaunchKernel",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cpu_op","ts":1000,"dur":60.000,
+            "name":"aten::fill_",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cuda_runtime","ts":1020,"dur":30.000,
+            "name":"cudaLaunchKernel",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"python_function","ts":1150,"dur":800.000,
+            "name":"vllm/model_executor/models/llama.py(381): forward",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cuda_runtime","ts":1300,"dur":50.000,
+            "name":"cudaLaunchKernel",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cpu_op","ts":1400,"dur":100.000,
+            "name":"_C_cache_ops::reshape_and_cache_flash",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cuda_runtime","ts":1460,"dur":30.000,
+            "name":"cudaLaunchKernel",
+            "pid":6616,"tid":6616,"args":{}
+        },
+
+        
+        {
+            "ph": "X","cat":"python_function","ts":2150,"dur":1900.000,
+            "name":"vllm/v1/engine/core.py(272): step",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cpu_op","ts":2200,"dur":200.000,
+            "name":"aten::copy_",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cuda_runtime","ts":2300,"dur":50.000,
+            "name":"cudaMemcpyAsync",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cpu_op","ts":3000,"dur":100.000,
+            "name":"_C_cache_ops::reshape_and_cache_flash",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cuda_runtime","ts":3050,"dur":30.000,
+            "name":"cudaLaunchKernel",
+            "pid":6616,"tid":6616,"args":{}
+        },
+
+        {
+            "ph": "X","cat":"python_function","ts":4100,"dur":1950.000,
+            "name":"vllm/v1/engine/core.py(272): step",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"python_function","ts":5000,"dur":1000.000,
+            "name":"vllm/model_executor/models/llama.py(381): forward",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cpu_op","ts":5400,"dur":200.000,
+            "name":"_C_cache_ops::reshape_and_cache_flash",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cuda_runtime","ts":5460,"dur":40.000,
+            "name":"cudaLaunchKernel",
+            "pid":6616,"tid":6616,"args":{}
+        },
+
+
+        {
+            "ph": "X","cat":"python_function","ts":6100,"dur":2000.000,
+            "name":"vllm/v1/engine/core.py(272): step",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"python_function","ts":7000,"dur":800.000,
+            "name":"vllm/model_executor/models/llama.py(381): forward",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cpu_op","ts":7400,"dur":180.000,
+            "name":"_C_cache_ops::reshape_and_cache_flash",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cuda_runtime","ts":7460,"dur":40.000,
+            "name":"cudaLaunchKernel",
+            "pid":6616,"tid":6616,"args":{}
+        },
+
+        {
+            "ph": "X","cat":"python_function","ts":8100,"dur":1500.000,
+            "name":"vllm/v1/engine/core.py(272): step",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"python_function","ts":8700,"dur":800.000,
+            "name":"vllm/model_executor/models/llama.py(381): forward",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cpu_op","ts":8900,"dur":200.000,
+            "name":"_C_cache_ops::reshape_and_cache_flash",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"cuda_runtime","ts":8950,"dur":40.000,
+            "name":"cudaLaunchKernel",
+            "pid":6616,"tid":6616,"args":{}
+        },
+        {
+            "ph": "X","cat":"python_function","ts":9600,"dur":300.000,
+            "name":"vllm/v1/engine/core.py(730): _process_input_queue",
+            "pid":6616,"tid":6616,"args":{}
+        },
+
+        {
+            "name":"thread_name","ph":"M","ts":0,
+            "pid":6616,"tid":6800,"arg":{"name":"hread 6800 (VLLM::EngineCor)"}
+        },
+        {
+            "name":"thread_name","ph":"M","ts":0,
+            "pid":6616,"tid":6800,"arg":{"name":"hread 6800 (VLLM::EngineCor)"}
+        },
+        {
+            "ph": "X","cat":"python_function","ts":0,"dur":10000.000,
+            "name":"multiprocessing/process.py(314): _bootstrap",
+            "pid":6616,"tid":6800,"args":{"Python parent id": null, "Python id": 12, "Ev Idx": 34353}
+        },
+        {
+            "ph": "X","cat":"python_function","ts":10,"dur":9950.000,
+            "name":"threading.py(1016): _bootstrap_inner",
+            "pid":6616,"tid":6800,"args":{"Python parent id": 12, "Python id": 13, "Ev Idx": 34354}
+        },
+        {
+            "ph": "X","cat":"python_function","ts":20,"dur":9930.000,
+            "name":"tqdm/_monitor.py(60): run",
+            "pid":6616,"tid":6800,"args":{}
+        },
+        {
+            "ph": "X","cat":"python_function","ts":30,"dur":9900.000,
+            "name":"threading.py(607): wait",
+            "pid":6616,"tid":6800,"args":{}
+        },
+
+        {
+            "name": "process_name","ph":"M","ts":0,
+            "pid":0,"tid":0,"arg":{"name":"VLLM::EngineCore"}
+        },
+        {
+            "name":"thread_name","ph":"M","ts":0,
+            "pid":0,"tid":7,"arg":{"name":"stream 7 "}
+        },
+        {
+
+            "ph": "s", "id": 7, "pid": 6616, "tid": 6616, "ts": 400,
+            "cat": "ac2g", "name": "ac2g"
+        },
+        {
+            "ph": "X","cat":"gpu_memcpy","ts":455,"dur":10.000,
+            "name":"Memcpy HtoD (Pinned -> Device)",
+            "pid":0,"tid":7,"args":{"External id": 19,"device": 0,"context": 1,"stream": 7,"correlation": 7,"bytes": 4,"memory bandwidth (GB/s)":0.005201560468140442}
+        },
+        {
+            "ph": "f", "id": 7, "pid": 0, "tid": 7, "ts": 455,
+            "cat": "ac2g", "name": "ac2g", "bp": "e"
+        },
+        
+        {
+            "ph": "s", "id": 8, "pid": 6616, "tid": 6616, "ts": 800,
+            "cat": "ac2g", "name": "ac2g"
+        },
+        {
+            "ph": "X","cat":"gpu_memcpy","ts":850,"dur":10.000,
+            "name":"Memcpy HtoD (Pinned -> Device)",
+            "pid":0,"tid":7,"args":{}
+        },
+        {
+            "ph": "f", "id": 8, "pid": 0, "tid": 7, "ts": 850,
+            "cat": "ac2g", "name": "ac2g", "bp": "e"
+        },
+
+        {
+            "ph": "s", "id": 9, "pid": 6616, "tid": 6616, "ts": 920,
+            "cat": "ac2g", "name": "ac2g"
+        },
+        {
+            "ph": "X","cat":"kernel","ts":930,"dur":40.000,
+            "name":"void at::native::unrolled_elementwise_kernel<at::native::CUDAFunctorOnSelf_add<int>, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast>(int, at::native::CUDAFunctorOnSelf_add<int>, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithoutCast, at::native::memory::StoreWithoutCast)",
+            "pid":0,"tid":7,"args":{}
+        },
+        {
+            "ph": "f", "id": 9, "pid": 0, "tid": 7, "ts": 930,
+            "cat": "ac2g", "name": "ac2g", "bp": "e"
+        },
+
+        {
+            "ph": "s", "id": 10, "pid": 6616, "tid": 6616, "ts": 1020,
+            "cat": "ac2g", "name": "ac2g"
+        },
+        {
+            "ph": "X","cat":"kernel","ts":1040,"dur":40.000,
+            "name":"void at::native::vectorized_elementwise_kernel<2, at::native::FillFunctor<long>, std::array<char*, 1ul> >(int, at::native::FillFunctor<long>, std::array<char*, 1ul>)",
+            "pid":0,"tid":7,"args":{}
+        },
+        {
+            "ph": "f", "id": 10, "pid": 0, "tid": 7, "ts": 1040,
+            "cat": "ac2g", "name": "ac2g", "bp": "e"
+        },
+
+        {
+            "ph": "s", "id": 11, "pid": 6616, "tid": 6616, "ts": 1350,
+            "cat": "ac2g", "name": "ac2g"
+        },
+        {
+            "ph": "X","cat":"kernel","ts":1400,"dur":50.000,
+            "name":"triton_tem_fused_0",
+            "pid":0,"tid":7,"args":{}
+        },
+        {
+            "ph": "f", "id": 11, "pid": 0, "tid": 7, "ts": 1400,
+            "cat": "ac2g", "name": "ac2g", "bp": "e"
+        },
+
+        {
+            "ph": "s", "id": 12, "pid": 6616, "tid": 6616, "ts": 1460,
+            "cat": "ac2g", "name": "ac2g"
+        },
+        {
+            "ph": "X","cat":"kernel","ts":1500,"dur":50.000,
+            "name":"void vllm::reshape_and_cache_flash_kernel<unsigned short, unsigned short, (vllm::Fp8KVCacheDataType)0>(unsigned short const*, unsigned short const*, unsigned short*, unsigned short*, long const*, long, long, long, long, long, int, int, int, float const*, float const*)",
+            "pid":0,"tid":7,"args":{}
+        },
+        {
+            "ph": "f", "id": 12, "pid": 0, "tid": 7, "ts": 1500,
+            "cat": "ac2g", "name": "ac2g", "bp": "e"
+        },
+
+        {
+            "ph": "s", "id": 13, "pid": 6616, "tid": 6616, "ts": 2300,
+            "cat": "ac2g", "name": "ac2g"
+        },
+        {
+            "ph": "X","cat":"gpu_memcpy","ts":2350,"dur":10.000,
+            "name":"Memcpy HtoD (Pinned -> Device)",
+            "pid":0,"tid":7,"args":{}
+        },
+        {
+            "ph": "f", "id": 13, "pid": 0, "tid": 7, "ts": 2350,
+            "cat": "ac2g", "name": "ac2g", "bp": "e"
+        },
+
+        {
+            "ph": "s", "id": 14, "pid": 6616, "tid": 6616, "ts": 3050,
+            "cat": "ac2g", "name": "ac2g"
+        },
+        {
+            "ph": "X","cat":"kernel","ts":3100,"dur":100.000,
+            "name":"void vllm::reshape_and_cache_flash_kernel<unsigned short, unsigned short, (vllm::Fp8KVCacheDataType)0>(unsigned short const*, unsigned short const*, unsigned short*, unsigned short*, long const*, long, long, long, long, long, int, int, int, float const*, float const*)",
+            "pid":0,"tid":7,"args":{}
+        },
+        {
+            "ph": "f", "id": 14, "pid": 0, "tid": 7, "ts": 3100,
+            "cat": "ac2g", "name": "ac2g", "bp": "e"
+        },
+
+        {
+            "ph": "s", "id": 15, "pid": 6616, "tid": 6616, "ts": 5460,
+            "cat": "ac2g", "name": "ac2g"
+        },
+        {
+            "ph": "X","cat":"kernel","ts":5500,"dur":50.000,
+            "name":"void vllm::reshape_and_cache_flash_kernel<unsigned short, unsigned short, (vllm::Fp8KVCacheDataType)0>(unsigned short const*, unsigned short const*, unsigned short*, unsigned short*, long const*, long, long, long, long, long, int, int, int, float const*, float const*)",
+            "pid":0,"tid":7,"args":{}
+        },
+        {
+            "ph": "f", "id": 15, "pid": 0, "tid": 7, "ts": 5500,
+            "cat": "ac2g", "name": "ac2g", "bp": "e"
+        },
+
+        {
+            "ph": "s", "id": 16, "pid": 6616, "tid": 6616, "ts": 7460,
+            "cat": "ac2g", "name": "ac2g"
+        },
+        {
+            "ph": "X","cat":"kernel","ts":7500,"dur":50.000,
+            "name":"void vllm::reshape_and_cache_flash_kernel<unsigned short, unsigned short, (vllm::Fp8KVCacheDataType)0>(unsigned short const*, unsigned short const*, unsigned short*, unsigned short*, long const*, long, long, long, long, long, int, int, int, float const*, float const*)",
+            "pid":0,"tid":7,"args":{}
+        },
+        {
+            "ph": "f", "id": 16, "pid": 0, "tid": 7, "ts": 7500,
+            "cat": "ac2g", "name": "ac2g", "bp": "e"
+        },
+
+        {
+            "ph": "s", "id": 17, "pid": 6616, "tid": 6616, "ts": 8950,
+            "cat": "ac2g", "name": "ac2g"
+        },
+        {
+            "ph": "X","cat":"kernel","ts":9000,"dur":50.000,
+            "name":"void vllm::reshape_and_cache_flash_kernel<unsigned short, unsigned short, (vllm::Fp8KVCacheDataType)0>(unsigned short const*, unsigned short const*, unsigned short*, unsigned short*, long const*, long, long, long, long, long, int, int, int, float const*, float const*)",
+            "pid":0,"tid":7,"args":{}
+        },
+        {
+            "ph": "f", "id": 17, "pid": 0, "tid": 7, "ts": 9000,
+            "cat": "ac2g", "name": "ac2g", "bp": "e"
+        }
+    ]
+}
